@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include "selection_sort.c"
+#include "inserion_sort.c"
 
 int main (int argc,const char* argv[])
 {
+
+    //**********************************************Selection Sort******************************************************
     int dmin    =       0;
     int dmax    =    1000;
     int nstart  =      20;
@@ -84,5 +87,21 @@ int main (int argc,const char* argv[])
     free (data);
     free (dup);
 
+    //*****************************************************************************************************************
+    printf ("*****************************************************************************************************************\n");
+
+    printf ("inicio insertion sort\n");
+
+    int a[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+    int n = sizeof a / sizeof a[0];
+    int i;
+    for (i = 0; i < n; i++)
+        printf("%d%s", a[i], i == n - 1 ? "\n" : " ");
+    insertion_sort(a, n);
+    for (i = 0; i < n; i++)
+        printf("%d%s", a[i], i == n - 1 ? "\n" : " ");
+    //return 0;
+
     return 0;
+
 }
