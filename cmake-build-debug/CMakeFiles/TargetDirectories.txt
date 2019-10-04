@@ -1,0 +1,3 @@
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/cmake-build-debug/CMakeFiles/Tarea_Extraclase_3_.dir
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/cmake-build-debug/CMakeFiles/edit_cache.dir

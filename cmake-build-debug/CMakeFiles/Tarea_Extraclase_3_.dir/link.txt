@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/Tarea_Extraclase_3_.dir/main.c.o  -o Tarea_Extraclase_3_ 

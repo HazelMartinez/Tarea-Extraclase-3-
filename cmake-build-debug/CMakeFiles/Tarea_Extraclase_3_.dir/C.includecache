@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/main.c
+stdio.h
+-
+selection_sort.c
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/selection_sort.c
+
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/selection_sort.c
+selection_sort.h
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/selection_sort.h
+selection_sort.h
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/selection_sort.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+fcntl.h
+-
+limits.h
+-
+sys/time.h
+-
+
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/selection_sort.h
+
