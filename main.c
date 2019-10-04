@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "selection_sort.c"
 #include "inserion_sort.c"
-
+#include "bubble_sort.c"
 int main (int argc,const char* argv[])
 {
 
@@ -88,7 +88,7 @@ int main (int argc,const char* argv[])
     free (dup);
 
     //*****************************************************************************************************************
-    printf ("*****************************************************************************************************************\n");
+    printf ("***********************************************************************************************\n");
 
     printf ("inicio insertion sort\n");
 
@@ -101,6 +101,21 @@ int main (int argc,const char* argv[])
     for (i = 0; i < n; i++)
         printf("%d%s", a[i], i == n - 1 ? "\n" : " ");
     //return 0;
+    //*****************************************************************************************************************
+    printf ("***********************************************************************************************\n");
+
+    printf ("inicio bubble sort\n");
+
+    int ab[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
+    int nb = sizeof a / sizeof a[0];
+    int ib;
+    for (ib = 0; ib < n; ib++)
+        printf("%d%s", ab[ib], ib == nb - 1 ? "\n" : " ");
+    bubble_sort(ab, nb);
+    for (ib = 0; ib < nb; ib++)
+        printf("%d%s", ab[ib], ib == nb - 1 ? "\n" : " ");
+        //return 0;
+
 
     return 0;
 

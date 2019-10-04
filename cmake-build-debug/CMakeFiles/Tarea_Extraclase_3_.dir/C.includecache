@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/bubble_sort.c
+bubble_sort.h
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/bubble_sort.h
+stdio.h
+-
+
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/bubble_sort.h
+
 /home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/inserion_sort.c
 inserion_sort.h
 /home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/inserion_sort.h
@@ -19,6 +27,8 @@ selection_sort.c
 /home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/selection_sort.c
 inserion_sort.c
 /home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/inserion_sort.c
+bubble_sort.c
+/home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/bubble_sort.c
 
 /home/hazel/Escritorio/TareaExtraclase_algoritmos ordenamiento/Tarea-Extraclase-3-/selection_sort.c
 selection_sort.h
