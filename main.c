@@ -2,121 +2,74 @@
 #include "selection_sort.c"
 #include "inserion_sort.c"
 #include "bubble_sort.c"
+#include "Benchmark.c"
 int main (int argc,const char* argv[])
 {
-
-    //**********************************************Selection Sort******************************************************
-    int dmin    =       0;
-    int dmax    =    1000;
-    int nstart  =      20;
-    int nmax    =   50000;
-    double nfac =       1.2;
+    int dmin = -30;
+    int dmax = 10000;
+    int nstart = 3;
+    double nfac = 1.2;
     double nd;
-    int * data;
-    int * dup;
+    int *data;
+    int *dup;
 
-    /*
-      Allocate one big random input data array. For varying the and
-      making sure we always start with random input, we will use a
-      duplicate (with just the first N entries) at each iteration.
-    */
+    printf("# Ingrese el número del algoritmo que desea utilizar\n"
+           "# 1 - Bubble Sort\n"
+           "# 2 - Selection Sort\n"
+           "# 3 - Insertion Sort\n"
+           "# => ");
+    char operator;
+    scanf("%c", &operator);
 
-    printf ("# generating input data (this can take a while...)\n");
-    fflush (stdout);
-    data = random_array (dmin, dmax, nmax);
+    printf("################################################\n"
+           "# Ingrese la cantidad de valores que desea comprobar\n"
+           "# Ejemplo: 10000\n"
+           "# => ");
+    int nmax;
+    scanf("%d", &nmax);
 
-    dup = malloc (nmax * sizeof(int));
+    fflush(stdout);
+    data = random_array(dmin, dmax, nmax);
+
+    dup = malloc(nmax * sizeof(int));
     if (NULL == dup) {
         printf("error malloc");
         return EXIT_FAILURE;
-
     }
 
-    printf ("################################################\n"
-            "#\n"
-            "# merge sort runtime measurements\n"
-            "#\n"
-            "# column 1: N\n"
-            "# column 2: T [ms]\n"
-            "#\n");
-
-    /*
-      Main benchmarking loop.
-      Note that we use a floating point "length" so that we can easily
-      create a geometric series for N. This spaces the sampled array
-      sizes more densely for small N, and for big N (where things
-      usually take much longer) we don't take so many samples (otherwise
-      running the benchmark takes a really long time).
-    */
+    printf("################################################\n"
+           "#\n"
+           "# Columna 1: N\n"
+           "# Columna 2: T [ms]\n"
+           "#\n");
 
     for (nd = nstart; nd <= nmax; nd *= nfac) {
         int nn;
         double tstart, tstop;
 
-        /*
-          convert the floating point "length" to an integer
-        */
         nn = nd;
 
-        printf ("%8d", nn);
-        fflush (stdout);
+        printf("%8d", nn);
+        fflush(stdout);
 
-        /*
-          use a fresh duplicate from the random input data
-        */
-        memcpy (dup, data, nn * sizeof(int));
+        memcpy(dup, data, nn * sizeof(int));
 
-        tstart = clockms ();
-        if(tstart==42.42){
+        tstart = clockms();
+        if (tstart == 42.42) {
             return EXIT_FAILURE;
         }
 
-        selectionSort(dup,nn);
-        tstop = clockms ();
-        if(tstop==42.42){
+        if(operator == '1'){bubble_sort(dup, nn);}
+        if(operator== '2'){selectionSort(dup, nn);}
+        if(operator == '3'){insertion_sort(dup, nn);}
+
+        tstop = clockms();
+        if (tstop == 42.42) {
             return EXIT_FAILURE;
         }
 
-        printf ("  %8g\n", tstop - tstart);
+        printf("  %8g\n", tstop - tstart);
     }
-
-    /*
-      End of the program.
-    */
-
-    free (data);
-    free (dup);
-
-    //*****************************************************************************************************************
-    printf ("***********************************************************************************************\n");
-
-    printf ("inicio insertion sort\n");
-
-    int a[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
-    int n = sizeof a / sizeof a[0];
-    int i;
-    for (i = 0; i < n; i++)
-        printf("%d%s", a[i], i == n - 1 ? "\n" : " ");
-    insertion_sort(a, n);
-    for (i = 0; i < n; i++)
-        printf("%d%s", a[i], i == n - 1 ? "\n" : " ");
-    //return 0;
-    //*****************************************************************************************************************
-    printf ("***********************************************************************************************\n");
-
-    printf ("inicio bubble sort\n");
-
-    int ab[] = {4, 65, 2, -31, 0, 99, 2, 83, 782, 1};
-    int nb = sizeof a / sizeof a[0];
-    int ib;
-    for (ib = 0; ib < n; ib++)
-        printf("%d%s", ab[ib], ib == nb - 1 ? "\n" : " ");
-    bubble_sort(ab, nb);
-    for (ib = 0; ib < nb; ib++)
-        printf("%d%s", ab[ib], ib == nb - 1 ? "\n" : " ");
-        //return 0;
-
-
-    return 0;
-
+    free(data);
+    free(dup);
 }
